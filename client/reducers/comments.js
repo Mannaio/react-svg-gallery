@@ -1,4 +1,4 @@
-function postComments(state = [], action) {
+function svgComments(state = [], action) {
   switch(action.type){
     case 'ADD_COMMENT':
       // return the new state with the new comment
@@ -21,12 +21,12 @@ function postComments(state = [], action) {
 }
 
 function comments(state = [], action) {
-  if(typeof action.postId !== 'undefined') {
+  if(typeof action.svgId !== 'undefined') {
     return {
       // take the current state
       ...state,
-      // overwrite this post with a new one
-      [action.postId]: postComments(state[action.postId], action)
+      // overwrite this svg with a new one
+      [action.svgId]: svgComments(state[action.svgId], action)
     }
   }
   return state;

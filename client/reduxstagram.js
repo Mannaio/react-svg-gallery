@@ -8,7 +8,7 @@ import css from './styles/style.styl';
 // Import Components
 import App from './components/App';
 import Single from './components/Single';
-import PhotoGrid from './components/PhotoGrid';
+import SvgGrid from './components/SvgGrid';
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -19,8 +19,8 @@ const router = (
   <Provider store={store}>
     <Router history={history}>
       <Route path="/" component={App}>
-        <IndexRoute component={PhotoGrid}></IndexRoute>
-        <Route path="/view/:postId" component={Single}></Route>
+        <IndexRoute component={SvgGrid}></IndexRoute>
+        <Route path="/view/:svgId" component={Single}></Route>
       </Route>
     </Router>
   </Provider>

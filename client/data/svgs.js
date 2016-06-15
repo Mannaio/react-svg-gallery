@@ -1,4 +1,4 @@
-const posts = [
+const svgs = [
    {
       "code":"BAcyDyQwcXX",
       "viewBox":"0 0 70 70",
@@ -12,4 +12,4 @@ const posts = [
 ];
 
 
-export default posts;
+export default svgs;

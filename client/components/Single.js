@@ -1,20 +1,20 @@
 import React from 'react';
-import Photo from './Photo';
+import Svg from './Svg';
 import Comments from './Comments';
 
 const Single = React.createClass({
   render() {
-    const { postId } = this.props.params;
+    const { svgId } = this.props.params;
 
-    const i = this.props.posts.findIndex((post) => post.code === postId);
-    const post = this.props.posts[i];
+    const i = this.props.svgs.findIndex((svg) => svg.code === svgId);
+    const svg = this.props.svgs[i];
 
-    const postComments = this.props.comments[postId] || [];
+    const svgComments = this.props.comments[svgId] || [];
 
     return (
       <div className="single-photo">
-        <Photo i={i} post={post} {...this.props} />
-        <Comments postComments={postComments} {...this.props} />
+        <Svg i={i} svg={svg} {...this.props} />
+        <Comments svgComments={svgComments} {...this.props} />
       </div>
     )
   }

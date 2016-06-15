@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 
-import posts from './posts';
+import svgs from './svgs';
 import comments from './comments';
 
-const rootReducer = combineReducers({posts, comments, routing: routerReducer });
+const rootReducer = combineReducers({svgs, comments, routing: routerReducer });
 
 export default rootReducer;

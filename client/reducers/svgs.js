@@ -1,4 +1,4 @@
-function posts(state = [], action) {
+function svgs(state = [], action) {
   switch(action.type) {
     case 'INCREMENT_LIKES' :
       console.log("Incrementing Likes!!");
@@ -13,4 +13,4 @@ function posts(state = [], action) {
   }
 }
 
-export default posts;
+export default svgs;

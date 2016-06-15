@@ -6,11 +6,11 @@ import { browserHistory } from 'react-router';
 import rootReducer from './reducers/index';
 
 import comments from './data/comments';
-import posts from './data/posts';
+import svgs from './data/svgs';
 
 // create an object for the default data
 const defaultState = {
-  posts,
+  svgs,
   comments
 };
 
