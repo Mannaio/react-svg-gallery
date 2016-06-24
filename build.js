@@ -1,25 +1,26 @@
-var fs = require('fs')
-var React = require('react')
-var ReactDOMServer = require('react-dom/server')
-var Manna = require('./Manna')
+import fs from 'fs';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
+import Manna from './Manna';
+import Cog from './Manna';
 
-var build = function(name, props) {
+const build = (name="defaultName", props)=> {
+    let size = props.size || 64;
 
-  props.size = props.size || 64
-  var size = props.size
-  var viewBox = [0, 0, size, size].join(' ')
-  var svg = [
-    '<svg xmlns="http://www.w3.org/2000/svg" ',
-      'viewBox="', viewBox, '" ',
-      'width="', size, '" ',
-      'height="', size, '" ',
-    '>',
-    ReactDOMServer.renderToStaticMarkup(React.createElement(Manna, props)),
-    '</svg>'
-  ].join('')
+    let svgProps={
+        xmlns:"http://www.w3.org/2000/svg",
+        viewBox:`0 0 ${size} ${size}`,
+        width:size,
+        height:size
+    };
 
-  fs.writeFileSync('client/data/' + name + '.svg', svg)
+    let svg = renderToStaticMarkup(
+    <svg {...svgProps}>
+       <Cog {...props}/>
+       <Manna {...props}/>
+    </svg>);
 
-}
+    fs.writeFileSync(`client/data/${name}.svg`, svg);
+};
 
-build('manna-icon', {})
+build('manna-icon', {});
