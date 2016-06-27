@@ -2,7 +2,7 @@ import fs from 'fs';
 import React from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Manna from './Manna';
-import Cog from './Manna';
+import Cog from './Cog';
 
 const build = (name="defaultName", props)=> {
     let size = props.size || 64;
