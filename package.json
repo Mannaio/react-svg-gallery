@@ -10,7 +10,7 @@
     "clean": "rimraf dist",
     "start": "nodemon --exec babel-node devServer.js",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos",
-    "jsx": "jsx -x jsx client/src ."
+    "jsx": "jsx -x jsx src ."
   },
   "repository": {
     "type": "git",

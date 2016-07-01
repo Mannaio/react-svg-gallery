@@ -14,13 +14,15 @@ const build = (name="defaultName", props)=> {
         height:size
     };
 
-    let svg = renderToStaticMarkup(
-    <svg {...svgProps}>
-       <Cog {...props}/>
-       <Manna {...props}/>
-    </svg>);
+    const svgs = [];
+    var n = 1;
 
-    fs.writeFileSync(`client/data/${name}.svg`, svg);
+    for (var i = 0; i < n; i++) {
+      svgs.push(Cog.prototype.render());
+      svgs.push(Manna.prototype.render());
+    }
+
+    fs.writeFileSync(`client/data/${name}.js`, "const svgs =" + JSON.stringify(svgs).toString() + "; export default svgs" + ";");
 };
 
-build('manna-icon', {});
+build('svgs', {});
