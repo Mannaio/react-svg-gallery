@@ -1,20 +1,21 @@
 var React = require('react')
 
-var Cog = React.createClass({displayName: "Cog",
+var Manna = React.createClass({displayName: "Cog",
 
-  getInitialState: function() {
-    return {
-      size: 64,
-      d1: 1,
-      d2: .6875,
-      d3: .375,
-      teeth: 4,
-      splay: 0.375,
-      fill: 'currentcolor'
-    }
-  },
+  // getInitialState: function() {
+  //   return {
+  //     size: 64,
+  //     d1: 1,
+  //     d2: .6875,
+  //     d3: .375,
+  //     teeth: 4,
+  //     splay: 0.375,
+  //     fill: 'currentcolor'
+  //   }
+  // },
 
   initVal: {
+    likes: 10,
     code: "2",
     size: "64",
     d1: 1,
@@ -22,13 +23,17 @@ var Cog = React.createClass({displayName: "Cog",
     d3: .375,
     teeth: 4,
     splay: 0.375,
-    fill: 'currentcolor'
+    fill: 'currentcolor',
+    caption: 'Third SVG'
   },
 
   render: function() {
 
+    var caption = this.initVal.caption
+    var likes = this.initVal.likes
     var code = this.initVal.code
-    var size = this.initVal.size
+    // var size = this.initVal.size
+    var size = Math.random()*100
     var fill = this.initVal.fill
 
     // Center
@@ -55,6 +60,8 @@ var Cog = React.createClass({displayName: "Cog",
     ].join(' ')
 
     return {
+      caption: caption,
+      likes: likes,
       code: code,
       viewBox: viewBox,
       w: size,
@@ -67,4 +74,4 @@ var Cog = React.createClass({displayName: "Cog",
 
 });
 
-module.exports = Cog
+module.exports = Manna
