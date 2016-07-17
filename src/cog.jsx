@@ -15,6 +15,7 @@ var Cog = React.createClass({
   },
 
   initVal: {
+    code: "1",
     size: "64",
     d1: 1,
     d2: .6875,
@@ -27,6 +28,7 @@ var Cog = React.createClass({
   render: function() {
 
     // var size = this.initVal.size
+    var code = this.initVal.code
     var size = Math.random()*100
     var fill = this.initVal.fill
 
@@ -54,6 +56,7 @@ var Cog = React.createClass({
     ].join(' ')
 
     return {
+      code: code,
       viewBox: viewBox,
       w: size,
       h: size,

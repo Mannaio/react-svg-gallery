@@ -1,6 +1,6 @@
 var React = require('react')
 
-var Cog = React.createClass({displayName: "Cog",
+var Square = React.createClass({
 
   getInitialState: function() {
     return {
@@ -15,7 +15,7 @@ var Cog = React.createClass({displayName: "Cog",
   },
 
   initVal: {
-    code: "2",
+    code: "3",
     size: "64",
     d1: 1,
     d2: .6875,
@@ -27,8 +27,9 @@ var Cog = React.createClass({displayName: "Cog",
 
   render: function() {
 
+    // var size = this.initVal.size
     var code = this.initVal.code
-    var size = this.initVal.size
+    var size = Math.random()*100
     var fill = this.initVal.fill
 
     // Center
@@ -61,10 +62,11 @@ var Cog = React.createClass({displayName: "Cog",
       h: size,
       fill: fill,
       d: pathData,
+
     }
 
   }
 
 });
 
-module.exports = Cog
+module.exports = Square

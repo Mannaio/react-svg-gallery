@@ -1,13 +1,16 @@
-# Learn Redux
+# react-svg-gallery
+React SVG Generating Gallery
 
-A simple React + Redux implementation application for building a SVG Gallery
+This is a simple React web application to generate data objects for svg elements displayed in a Gallery
 
-## Running
+These are the steps to reproduce in order to create the the data objects necessaries to fill the svg with the data
 
-First `npm install` to grab all the necessary dependencies.
+In the terminal
 
-Then run `npm start` and open <localhost:7770> in your browser.
+Run "npm run jsx" to convert the .jsx to js in the src folder
+Run "npm run svg" to write the data objects in the client/data/svgs.js where the data are consumed
+Run "npm build" to start the WebPack build
 
-## Production Build
+Anu question let me know at tmms.vll@gmail.com
 
-Run `npm build` to create a distro folder and a bundle.js file.
+Repo References: https://github.com/wesbos/Learn-Redux and http://jxnblk.com/react-icons/
