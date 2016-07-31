@@ -34,8 +34,9 @@
     "eslint": "^2.9.0",
     "eslint-plugin-babel": "^3.2.0",
     "eslint-plugin-react": "^5.0.1",
-    "graceful-fs": "^4.1.2",
     "express": "^4.13.4",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "graceful-fs": "^4.1.2",
     "raven-js": "^2.3.0",
     "react": "^15.0.2",
     "react-addons-css-transition-group": "^15.0.2",
@@ -61,9 +62,11 @@
     "babel-cli": "^6.10.1",
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
+    "html-webpack-plugin": "^2.22.0",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.2",
     "poststylus": "^0.2.3",
-    "react-addons-test-utils": "^15.0.2"
+    "react-addons-test-utils": "^15.0.2",
+    "react-to-html-webpack-plugin": "^2.2.0"
   }
 }

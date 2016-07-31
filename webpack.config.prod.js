@@ -1,10 +1,15 @@
 var path = require('path');
 var webpack = require('webpack');
+var poststylus = require('poststylus');
+var autoprefixer = require('autoprefixer');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ReactToHtmlPlugin = require('react-to-html-webpack-plugin');
 
 module.exports = {
   devtool: 'source-map',
   entry: [
-    
+
     './client/reduxstagram'
   ],
   output: {
@@ -23,6 +28,15 @@ module.exports = {
       compressor: {
         warnings: false
       }
+    }),
+    new HtmlWebpackPlugin({
+      title: 'Reduxstagram',
+      template: 'index.html',
+      filename: 'index.html' // Load a custom template (ejs by default see the FAQ for details)
+    }),
+    // new ReactToHtmlPlugin('index.html', 'index.js')
+    new ExtractTextPlugin("style.css", {
+        allChunks: true
     })
   ],
   module: {
@@ -34,11 +48,16 @@ module.exports = {
       include: path.join(__dirname, 'client')
     },
     // CSS
-    { 
-      test: /\.styl$/, 
+    {
+      test: /\.styl$/,
       include: path.join(__dirname, 'client'),
-      loader: 'style-loader!css-loader!stylus-loader'
-    }
+      loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
+    },
+    ]
+  },
+  stylus: {
+    use: [
+      poststylus(['autoprefixer'])
     ]
   }
 };
