@@ -1,6 +1,6 @@
-var React = require('react')
+const React = require('react')
 
-var Square = React.createClass({
+const Square = React.createClass({
 
   // getInitialState: function() {
   //   return {
@@ -29,29 +29,29 @@ var Square = React.createClass({
 
   render: function() {
 
-    // var size = this.initVal.size
-    var caption = this.initVal.caption
-    var likes = this.initVal.likes
-    var code = this.initVal.code
-    var size = Math.random()*100
-    var fill = this.initVal.fill
+    // const size = this.initVal.size
+    const caption = this.initVal.caption
+    const likes = this.initVal.likes
+    const code = this.initVal.code
+    const size = Math.random()*100
+    const fill = this.initVal.fill
 
     // Center
-    var c = size / 2
+    const c = size / 2
 
     // Radii
-    var r1 = this.initVal.d1 * size / 2
-    var r2 = this.initVal.d2 * size / 2
-    var r3 = this.initVal.d3 * size / 2
+    const r1 = this.initVal.d1 * size / 2
+    const r2 = this.initVal.d2 * size / 2
+    const r3 = this.initVal.d3 * size / 2
 
     // Angle
-    var angle = 360 / this.initVal.teeth
-    var offset = 90
+    const angle = 360 / this.initVal.teeth
+    const offset = 90
 
-    var viewBox = [0, 0, size, size].join(' ')
+    const viewBox = [0, 0, size, size].join(' ')
 
 
-    var pathData = [
+    const pathData = [
       'M', 2, 2, // Move to 2,2
       'L', 62, 2, // Draw a line to 62,2
       'L', 62, 62, // Draw a line to 62,62
