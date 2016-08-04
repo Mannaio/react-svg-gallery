@@ -1,29 +1,44 @@
 const React = require('react')
 
-const Square = React.createClass({
+const Line = React.createClass({
 
   initVal: {
     likes: 10,
-    code: "3",
+    code: "5",
     size: "64",
+    height: "150",
+    width: "200",
     d1: 1,
     d2: .6875,
     d3: .375,
-    teeth: 4,
     splay: 0.375,
-    fill: 'currentcolor',
-    caption: 'Second SVG'
+    fill: 'none',
+    caption: 'Animate SVG'
+  },
+
+  styles: {
+    strokeblack: 'black',
+    strokered: 'red',
+    strokelinecap: 'round',
+    strokedasharray: '5',
+    strokewidth: '1'
   },
 
   render: function() {
 
     // const size = this.initVal.size
+    const size = this.initVal.size
     const caption = this.initVal.caption
     const likes = this.initVal.likes
     const code = this.initVal.code
-    const size = Math.random()*100
+    const height = this.initVal.height
+    const width = this.initVal.width
     const fill = this.initVal.fill
-
+    const strokeRed = this.styles.strokered
+    const strokeBlack = this.styles.strokeblack
+    const linecap = this.styles.linecap
+    const dasharray = this.styles.dasharray
+    const strokewidth = this.styles.strokewidth
     // Center
     const c = size / 2
 
@@ -36,30 +51,35 @@ const Square = React.createClass({
     const angle = 360 / this.initVal.teeth
     const offset = 90
 
-    const viewBox = [0, 0, size, size].join(' ')
-
+    const pathDataCircle = [
+      'M', 10, 75, // Move to 10,5
+      'Q', 50, 10, 100, 75,
+      'T', 190, 75, // Draw a line to 190,75
+    ].join(' ')
 
     const pathData = [
-      'M', 2, 2, // Move to 2,2
-      'L', 62, 2, // Draw a line to 62,2
-      'L', 62, 62, // Draw a line to 62,62
-      'L', 2, 62, // Draw a line to 2,62
-      'L', 2, 2, // Draw a line to 2,2
+      'M', 10, 75, // Move to 2,2
+      'L', 190, 75, // Draw a line to 190,75
     ].join(' ')
 
     return {
       likes: likes,
       caption: caption,
       code: code,
-      viewBox: viewBox,
-      w: size,
-      h: size,
+      w: width,
+      h: height,
       fill: fill,
       d: pathData,
+      c: pathDataCircle,
+      strokeRed: strokeRed,
+      strokeBlack: strokeBlack,
+      linecap: linecap,
+      dasharray: dasharray,
+      strokewidth: strokewidth,
     }
 
   }
 
 });
 
-module.exports = Square
+module.exports = Line
