@@ -1,0 +1,1 @@
+const svgs =[{"viewBox":"0 0 64 64","w":64,"h":64,"fill":"currentcolor","d":"M 2 2 L 62 2 L 62 62 L 2 62 L 2 2"},{"viewBox":"0 0 64 64","w":64,"h":64,"fill":"currentcolor","d":"M 2 2 L 62 2 L 62 62 L 2 62 L 2 2"}] export default svgs;

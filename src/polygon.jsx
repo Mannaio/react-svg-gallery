@@ -13,6 +13,7 @@ const Polygon = React.createClass({displayName: "Polygon",
     splay: 0.375,
     fill: 'currentcolor',
     caption: 'Fourth SVG',
+    animation: 'animated',
     random: function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min;
     },
@@ -20,6 +21,7 @@ const Polygon = React.createClass({displayName: "Polygon",
 
   render: function() {
 
+    const animation = this.initVal.animation
     const caption = this.initVal.caption
     const likes = this.initVal.likes
     const code = this.initVal.code
@@ -55,6 +57,7 @@ const Polygon = React.createClass({displayName: "Polygon",
 
     return {
       caption: caption,
+      animation: animation,
       likes: likes,
       code: code,
       viewBox: viewBox,

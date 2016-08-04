@@ -9,7 +9,11 @@ const Svg = React.createClass({
       <figure className="grid-figure">
         <div className="grid-photo-wrap">
           <Link to={`/view/${svg.code}`}>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox={svg.viewBox} width={svg.w} height={svg.h}><svg viewBox={svg.viewBox} width={svg.w} height={svg.h} fill={svg.fill} stroke-width={svg.strokewidth} stroke={svg.stroke}><path d={svg.d}></path></svg></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className={svg.animation} viewBox={svg.viewBox} width={svg.w} height={svg.h}>
+              <svg viewBox={svg.viewBox} className={svg.animation} width={svg.w} height={svg.h} fill={svg.fill} stroke-width={svg.strokewidth} stroke={svg.stroke}>
+              <path d={svg.d}></path>
+              </svg>
+            </svg>
           </Link>
           <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
             <span key={svg.likes} className="likes-heart">{svg.likes}</span>

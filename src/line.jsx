@@ -1,37 +1,23 @@
 const React = require('react')
 
-const Cog = React.createClass({
-
-  // getInitialState: function() {
-  //   return {
-  //     size: 64,
-  //     d1: 1,
-  //     d2: .6875,
-  //     d3: .375,
-  //     teeth: 4,
-  //     splay: 0.375,
-  //     fill: 'currentcolor'
-  //   }
-  // },
+const Square = React.createClass({
 
   initVal: {
     likes: 10,
-    code: "1",
+    code: "3",
     size: "64",
     d1: 1,
     d2: .6875,
     d3: .375,
     teeth: 4,
     splay: 0.375,
-    animation: 'animated',
     fill: 'currentcolor',
-    caption: 'First SVG'
+    caption: 'Second SVG'
   },
 
   render: function() {
 
     // const size = this.initVal.size
-    const animation = this.initVal.animation
     const caption = this.initVal.caption
     const likes = this.initVal.likes
     const code = this.initVal.code
@@ -64,7 +50,6 @@ const Cog = React.createClass({
     return {
       likes: likes,
       caption: caption,
-      animation: animation,
       code: code,
       viewBox: viewBox,
       w: size,
@@ -77,4 +62,4 @@ const Cog = React.createClass({
 
 });
 
-module.exports = Cog
+module.exports = Square
