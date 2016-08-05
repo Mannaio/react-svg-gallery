@@ -11,8 +11,8 @@ const Svg = React.createClass({
           <Link to={`/view/${svg.code}`}>
             <svg xmlns="http://www.w3.org/2000/svg" className={svg.animation} viewBox={svg.viewBox} width={svg.w} height={svg.h}>
               <svg viewBox={svg.viewBox} className={svg.animation} width={svg.w} height={svg.h} fill={svg.fill}>
-              <path d={svg.d} stroke={svg.strokeBlack} strokeLinecap={svg.linecap} strokeDash={svg.dasharray} fill={svg.fill}></path>
-              <path d={svg.c} stroke={svg.strokeRed} strokeLinecap={svg.linecap} strokeDash={svg.dasharray} fill={svg.fill}></path>
+              <path d={svg.c} style={svg.style}></path>
+              <path d={svg.d} style={svg.styleLine}></path>
               </svg>
             </svg>
           </Link>

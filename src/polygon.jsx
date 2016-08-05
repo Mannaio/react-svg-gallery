@@ -26,7 +26,7 @@ const Polygon = React.createClass({displayName: "Polygon",
     const likes = this.initVal.likes
     const code = this.initVal.code
     // const size = this.initVal.size
-    const size = this.initVal.random(64, 128)
+    const size = this.initVal.random(128, 256)
     const fill = this.initVal.fill
 
     // Center
