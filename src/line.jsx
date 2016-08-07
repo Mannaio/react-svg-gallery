@@ -20,6 +20,7 @@ const Line = React.createClass({
 
   render: function() {
 
+    const animation = this.initVal.animation
     const caption = this.initVal.caption
     const likes = this.initVal.likes
     const code = this.initVal.code
@@ -71,6 +72,7 @@ const Line = React.createClass({
     return {
       likes: likes,
       caption: caption,
+      animation: animation,
       code: code,
       w: width,
       h: height,
