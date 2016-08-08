@@ -11,9 +11,8 @@ const Polygon = React.createClass({displayName: "Polygon",
     d3: .375,
     teeth: 4,
     splay: 0.375,
-    fill: 'currentcolor',
     caption: 'Fourth SVG',
-    animation: 'animated',
+    animation: '',
     random: function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min;
     },
@@ -27,7 +26,13 @@ const Polygon = React.createClass({displayName: "Polygon",
     const code = this.initVal.code
     // const size = this.initVal.size
     const size = this.initVal.random(128, 256)
-    const fill = this.initVal.fill
+    const styles = {
+      line : {
+        stroke: '#9e9d9e',
+        fill: 'none',
+        strokeWidth: '1'
+      }
+    }
 
     // Center
     const c = size / 2
@@ -52,7 +57,8 @@ const Polygon = React.createClass({displayName: "Polygon",
       'L', 64, 128, // Draw a line to 2,2
       'L', 18.745166004060962, 109.25483399593904,
       'L', 0, 64.00000000000001,
-      'L', 18.74516600406095, 18.745166004060962
+      'L', 18.74516600406095, 18.745166004060962,
+      'L', 64.00000000000001, 0,
     ].join(' ')
 
     return {
@@ -63,8 +69,8 @@ const Polygon = React.createClass({displayName: "Polygon",
       viewBox: viewBox,
       w: size,
       h: size,
-      fill: fill,
       d: pathData,
+      styleLine: styles.line
     }
   }
 });
