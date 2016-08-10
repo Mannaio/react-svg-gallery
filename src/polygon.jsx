@@ -12,7 +12,7 @@ const Polygon = React.createClass({displayName: "Polygon",
     teeth: 4,
     splay: 0.375,
     caption: 'Fourth SVG',
-    animation: '',
+    animation: 'wheel',
     random: function getRandomArbitrary(min, max) {
       return Math.random() * (max - min) + min;
     },
