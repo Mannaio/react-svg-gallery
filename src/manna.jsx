@@ -25,6 +25,11 @@ const Manna = React.createClass({displayName: "Cog",
     d5: 3.5,
     d6: 1.94,
     d7: 2.12,
+    d8: 2.25,
+    d9: 2.91,
+    d10: 1.75,
+    rad: 45,
+    rad2: 50,
     teeth: 6,
     splay: 0.375,
     fill: 'c60000',
@@ -33,6 +38,9 @@ const Manna = React.createClass({displayName: "Cog",
 
   render: function() {
 
+    // Global Variables
+    const rad = this.initVal.rad
+    const rad2 = this.initVal.rad2
     const caption = this.initVal.caption
     const likes = this.initVal.likes
     const code = this.initVal.code
@@ -50,6 +58,9 @@ const Manna = React.createClass({displayName: "Cog",
     const r5 = this.initVal.d5
     const r6 = this.initVal.d6
     const r7 = this.initVal.d7
+    const r8 = this.initVal.d8
+    const r9 = this.initVal.d9
+    const r10 = this.initVal.d10
 
     // Circle x coordinates
     const cx1 = size / r4
@@ -58,6 +69,9 @@ const Manna = React.createClass({displayName: "Cog",
     const cx4 = size / r7
 
     // Circle y coordinates
+    const cy1 = size / r8
+    const cy2 = size / r9
+    const cy3 = size / r10
 
 
     // Angle
