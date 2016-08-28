@@ -11,10 +11,24 @@ const Svg = React.createClass({
           <Link to={`/view/${svg.code}`}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox={svg.viewBox} width={svg.w} height={svg.h}>
               <svg viewBox={svg.viewBox} className={svg.animation} width={svg.w} height={svg.h} fill={svg.fill}>
-              <path d={svg.c} style={svg.style}></path>
-              <path d={svg.d} className={svg.animation} style={svg.styleLine}></path>
+              <circle cx={svg.cx1} cy={svg.cy1} r={svg.rad1}></circle>
+              <circle cx={svg.cx2} cy={svg.cy1} r={svg.rad1}></circle>
+              <circle cx={svg.cx3} cy={svg.cy1} r={svg.rad2}></circle>
+              <circle cx={svg.cx4} cy={svg.cy2} r={svg.rad1}></circle>
+              <circle cx={svg.cx4} cy={svg.cy3} r={svg.rad1}></circle>
+              <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight} fill="currentcolor">
+                <g className={svg.styleg1}>
+                  <path d={svg.c} style={svg.style}></path>
+                  <path d={svg.d} className={svg.animation} style={svg.styleLine}></path>
+                </g>
+                <svg viewBox={svg.viewBoxSmall}  width={svg.hexagonWidth} height={svg.hexagonHeight} fill="currentcolor">
+                  <g className={svg.styleg2}>
+                    <path d={svg.d2}></path>
+                  </g>
+                </svg>
               </svg>
             </svg>
+          </svg>
           </Link>
           <CSSTransitionGroup transitionName="like" transitionEnterTimeout={500} transitionLeaveTimeout={500}>
             <span key={svg.likes} className="likes-heart">{svg.likes}</span>
