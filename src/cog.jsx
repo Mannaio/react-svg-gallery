@@ -21,7 +21,7 @@ const Cog = React.createClass({
     d1: 1,
     d2: .6875,
     d3: .375,
-    teeth: 4,
+    teeth: 6,
     splay: 0.375,
     animation: 'animated',
     fill: 'currentcolor',
@@ -37,7 +37,7 @@ const Cog = React.createClass({
     const code = this.initVal.code
     const size = Math.random()*100
     const fill = this.initVal.fill
-
+    const teeth = this.initVal.teeth
     // Center
     const c = size / 2
 
@@ -52,13 +52,38 @@ const Cog = React.createClass({
 
     const viewBox = [0, 0, size, size].join(' ')
 
+    const rx = function(r, a) {
+      return c + r * Math.cos(rad(a))
+    }
+
+    const ry = function(r, a) {
+      return c + r * Math.sin(rad(a))
+    }
+
+    const num = function(n) {
+      return (n < 0.0000001) ? 0 : n
+    }
+
+    const rad = function(a) {
+      return Math.PI * a / 180
+    }
+
+    const drawTeeth = function(n) {
+      const d = []
+      for (let i = 0; i < n; i++) {
+        const a = angle * i - offset
+        const line = [
+          (i === 0) ? 'M' : 'L',
+          num(rx(r1, a)),
+          num(ry(r1, a)),
+        ].join(' ')
+        d.push(line)
+      }
+      return d.join(' ')
+    }
 
     const pathData = [
-      'M', 2, 2, // Move to 2,2
-      'L', 62, 2, // Draw a line to 62,2
-      'L', 62, 62, // Draw a line to 62,62
-      'L', 2, 62, // Draw a line to 2,62
-      'L', 2, 2, // Draw a line to 2,2
+      drawTeeth(teeth)
     ].join(' ')
 
     return {

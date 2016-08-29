@@ -19,11 +19,11 @@ const Svg = React.createClass({
               <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight} fill="currentcolor">
                 <g className={svg.styleg1}>
                   <path d={svg.c} style={svg.style}></path>
-                  <path d={svg.d} className={svg.animation} style={svg.styleLine}></path>
+                  <path d={svg.d2} className={svg.animation} style={svg.styleLine}></path>
                 </g>
-                <svg viewBox={svg.viewBoxSmall}  width={svg.hexagonWidth} height={svg.hexagonHeight} fill="currentcolor">
+                <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight} fill="currentcolor">
                   <g className={svg.styleg2}>
-                    <path d={svg.d2}></path>
+                    <path d={svg.d}></path>
                   </g>
                 </svg>
               </svg>

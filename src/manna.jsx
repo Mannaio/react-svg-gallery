@@ -32,12 +32,12 @@ const Manna = React.createClass({displayName: "Cog",
     rad2: 50,
     ratioHeight: 1.86,
     radioWidth: 1.05,
-    teeth: 5,
+    teeth: 4,
     teethSix: 6,
     splay: 0.375,
-    viewBoxParameters: 200,
-    initialHeight: 445,
-    initialWidth: 263,
+    viewBoxParameters: 400,
+    initialHeight: 100,
+    initialWidth: 100,
     fill: 'c60000',
     caption: 'Third SVG',
     styleg1: "g1",
@@ -96,10 +96,14 @@ const Manna = React.createClass({displayName: "Cog",
     const hexagonWidth  = initialWidth / rwidth
 
     // Angle
-    const angle = 360 / this.initVal.teeth
+    // const angle = 360 / this.initVal.teethSix
     const offset = 90
 
     const viewBoxSmall = [0, 0, viewBoxParameters, viewBoxParameters].join(' ')
+
+    const angle = function(n) {
+      return 360 / n;
+    }
 
     const rad = function(a) {
       return Math.PI * a / 180
@@ -119,7 +123,7 @@ const Manna = React.createClass({displayName: "Cog",
     const drawTeeth = function(n) {
       const d = []
       for (let i = 0; i < n; i++) {
-        const a = angle * i - offset
+        const a = angle(n) * i - offset
         const line = [
           (i === 0) ? 'M' : 'L',
           num(rx(r1, a)),
