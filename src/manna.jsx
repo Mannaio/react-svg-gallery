@@ -30,24 +30,27 @@ const Manna = React.createClass({displayName: "Cog",
     d10: 1.75,
     rad1: 45,
     rad2: 50,
-    ratioHeight: 1.86,
-    radioWidth: 1.05,
-    teeth: 4,
+    ratioHeight: 3.90,
+    ratioWidth: 1.72,
+    teeth: 5,
     teethSix: 6,
     splay: 0.375,
-    viewBoxParameters: 400,
-    initialHeight: 100,
-    initialWidth: 100,
+    viewBoxParametersWidth: 720,
+    viewBoxParametersHeight: 600,
+    initialHeight: 205,
+    initialWidth: 295,
     fill: 'c60000',
     caption: 'Third SVG',
     styleg1: "g1",
     styleg2: "g2",
+    transform: 'transform'
   },
 
   render: function() {
 
     // Global Variables
-    const viewBoxParameters = this.initVal.viewBoxParameters
+    const viewBoxParametersWidth = this.initVal.viewBoxParametersWidth
+    const viewBoxParametersHeight = this.initVal.viewBoxParametersHeight
     const styleg1 = this.initVal.styleg1
     const styleg2 = this.initVal.styleg2
     const initialHeight = this.initVal.initialHeight
@@ -61,6 +64,18 @@ const Manna = React.createClass({displayName: "Cog",
     const fill = this.initVal.fill
     const teeth = this.initVal.teeth
     const teethSix = this.initVal.teethSix
+    const transform = this.initVal.transform
+    const styles = {
+      circle: {
+        stroke: 'rgb(158, 157, 158)',
+        strokeWidth: '1',
+        fill: 'none',
+      },
+      path: {
+        opacity: '0.4',
+        fill: 'black'
+      }
+    }
 
     // Center
     const c = size / 2
@@ -76,7 +91,7 @@ const Manna = React.createClass({displayName: "Cog",
     const r8 = this.initVal.d8
     const r9 = this.initVal.d9
     const r10 = this.initVal.d10
-    const rheigt = this.initVal.ratioHeight
+    const rheight = this.initVal.ratioHeight
     const rwidth = this.initVal.ratioWidth
 
     // Circle x coordinates
@@ -92,14 +107,14 @@ const Manna = React.createClass({displayName: "Cog",
 
     // Width and height hexagon elements
 
-    const hexagonHeight = initialHeight / rheigt
-    const hexagonWidth  = initialWidth / rwidth
+    const hexagonHeight = initialHeight * rheight
+    const hexagonWidth  = initialWidth * rwidth
 
     // Angle
     // const angle = 360 / this.initVal.teethSix
     const offset = 90
 
-    const viewBoxSmall = [0, 0, viewBoxParameters, viewBoxParameters].join(' ')
+    const viewBoxSmall = [0, 0, viewBoxParametersHeight, viewBoxParametersWidth].join(' ')
 
     const angle = function(n) {
       return 360 / n;
@@ -165,8 +180,9 @@ const Manna = React.createClass({displayName: "Cog",
       initialWidth: initialWidth,
       hexagonHeight: hexagonHeight,
       hexagonWidth: hexagonWidth,
-      styleg1: styleg1,
-      styleg2: styleg2
+      transform: transform,
+      circle: styles.circle,
+      path: styles.path
     }
 
   }
