@@ -39,11 +39,11 @@ const Manna = React.createClass({displayName: "Cog",
     viewBoxParametersHeight: 600,
     initialHeight: 205,
     initialWidth: 295,
+    left: 239,
+    top: 370,
     fill: 'c60000',
     caption: 'Third SVG',
-    styleg1: "g1",
-    styleg2: "g2",
-    transform: 'transform'
+    translate: 'translate'
   },
 
   render: function() {
@@ -64,7 +64,10 @@ const Manna = React.createClass({displayName: "Cog",
     const fill = this.initVal.fill
     const teeth = this.initVal.teeth
     const teethSix = this.initVal.teethSix
-    const transform = this.initVal.transform
+    const translate = this.initVal.translate
+    const cleft = this.initVal.left
+    const ctop = this.initVal.top
+    const ctrans = 'translate('+cleft+', '+ctop+')';
     const styles = {
       circle: {
         stroke: 'rgb(158, 157, 158)',
@@ -74,7 +77,7 @@ const Manna = React.createClass({displayName: "Cog",
       path: {
         opacity: '0.4',
         fill: 'black'
-      }
+      },
     }
 
     // Center
@@ -180,9 +183,9 @@ const Manna = React.createClass({displayName: "Cog",
       initialWidth: initialWidth,
       hexagonHeight: hexagonHeight,
       hexagonWidth: hexagonWidth,
-      transform: transform,
       circle: styles.circle,
-      path: styles.path
+      path: styles.path,
+      transform: ctrans
     }
 
   }

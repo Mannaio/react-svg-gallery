@@ -17,7 +17,7 @@ const Svg = React.createClass({
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy2} r={svg.rad1}></circle>
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy3} r={svg.rad1}></circle>
               <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight} fill="currentcolor">
-                <g transform="translate(239, 370)">
+                <g transform={svg.transform}>
                   <path d={svg.c} style={svg.style}></path>
                   <path d={svg.d2} style={svg.path} className={svg.transform}></path>
                 </g>
