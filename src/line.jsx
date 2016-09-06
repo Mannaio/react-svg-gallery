@@ -77,7 +77,7 @@ const Line = React.createClass({
       w: width,
       h: height,
       fill: fill,
-      d: pathData,
+      d2: pathData,
       c: pathDataCircle,
       style: styles.circle,
       styleLine: styles.line

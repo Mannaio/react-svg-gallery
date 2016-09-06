@@ -69,7 +69,7 @@ const Polygon = React.createClass({displayName: "Polygon",
       viewBox: viewBox,
       w: size,
       h: size,
-      d: pathData,
+      d2: pathData,
       styleLine: styles.line
     }
   }

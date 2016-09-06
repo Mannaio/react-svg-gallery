@@ -16,14 +16,14 @@ const Svg = React.createClass({
               <circle style={svg.circle} cx={svg.cx3} cy={svg.cy1} r={svg.rad2}></circle>
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy2} r={svg.rad1}></circle>
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy3} r={svg.rad1}></circle>
-              <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight} fill="currentcolor">
+              <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight}>
                 <g transform={svg.transformFirstElement}>
                   <path d={svg.c} style={svg.style}></path>
-                  <path d={svg.d2} style={svg.path} className={svg.transform}></path>
+                  <path d={svg.d2} className={svg.animation} style={svg.styleLine}></path>
                 </g>
-                <svg viewBox={svg.viewBoxSmall}  width={svg.hexagonWidth} height={svg.hexagonHeight} fill="currentcolor">
+                <svg viewBox={svg.viewBoxSmall}  width={svg.hexagonWidth} height={svg.hexagonHeight}>
                   <g transform={svg.transformSecondElement}>
-                    <path d={svg.d} style={svg.path}></path>
+                    <path d={svg.d} style={svg.styleLine}></path>
                   </g>
                 </svg>
               </svg>

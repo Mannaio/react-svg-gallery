@@ -187,7 +187,7 @@ const Manna = React.createClass({displayName: "Cog",
       hexagonHeight: hexagonHeight,
       hexagonWidth: hexagonWidth,
       circle: styles.circle,
-      path: styles.path,
+      styleLine: styles.path,
       transformFirstElement: ctranFirstElement,
       transformSecondElement: ctranSeondElement
     }
