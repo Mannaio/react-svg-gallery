@@ -17,12 +17,12 @@ const Svg = React.createClass({
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy2} r={svg.rad1}></circle>
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy3} r={svg.rad1}></circle>
               <svg viewBox={svg.viewBoxSmall}  width={svg.initialWidth} height={svg.initialHeight} fill="currentcolor">
-                <g transform={svg.transform}>
+                <g transform={svg.transformFirstElement}>
                   <path d={svg.c} style={svg.style}></path>
                   <path d={svg.d2} style={svg.path} className={svg.transform}></path>
                 </g>
                 <svg viewBox={svg.viewBoxSmall}  width={svg.hexagonWidth} height={svg.hexagonHeight} fill="currentcolor">
-                  <g transform="translate(105, 395)">
+                  <g transform={svg.transformSecondElement}>
                     <path d={svg.d} style={svg.path}></path>
                   </g>
                 </svg>

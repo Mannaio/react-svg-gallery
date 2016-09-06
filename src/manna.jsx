@@ -67,7 +67,10 @@ const Manna = React.createClass({displayName: "Cog",
     const translate = this.initVal.translate
     const cleft = this.initVal.left
     const ctop = this.initVal.top
-    const ctrans = 'translate('+cleft+', '+ctop+')';
+    const cleftSecond = cleft - 134
+    const ctopSecond = ctop + 25
+    const ctranFirstElement = 'translate('+cleft+', '+ctop+')'
+    const ctranSeondElement = 'translate('+cleftSecond+', '+ctopSecond+')'
     const styles = {
       circle: {
         stroke: 'rgb(158, 157, 158)',
@@ -185,7 +188,8 @@ const Manna = React.createClass({displayName: "Cog",
       hexagonWidth: hexagonWidth,
       circle: styles.circle,
       path: styles.path,
-      transform: ctrans
+      transformFirstElement: ctranFirstElement,
+      transformSecondElement: ctranSeondElement
     }
 
   }
