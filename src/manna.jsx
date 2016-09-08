@@ -41,7 +41,6 @@ const Manna = React.createClass({displayName: "Cog",
     initialWidth: 295,
     left: 239,
     top: 370,
-    fill: 'c60000',
     caption: 'Third SVG',
     translate: 'translate'
   },

@@ -17,7 +17,7 @@ const Cog = React.createClass({
   initVal: {
     likes: 10,
     code: "1",
-    size: "64",
+    size: 350,
     d1: 1,
     d2: .6875,
     d3: .375,
@@ -35,7 +35,7 @@ const Cog = React.createClass({
     const caption = this.initVal.caption
     const likes = this.initVal.likes
     const code = this.initVal.code
-    const size = Math.random()*100
+    const size = this.initVal.size
     const fill = this.initVal.fill
     const teeth = this.initVal.teeth
     // Center
@@ -47,10 +47,21 @@ const Cog = React.createClass({
     const r3 = this.initVal.d3 * size / 2
 
     // Angle
-    const angle = 360 / this.initVal.teeth
+    const angle = function(n) {
+      return 360 / n;
+    }
+
     const offset = 90
 
     const viewBox = [0, 0, size, size].join(' ')
+
+    const styles = {
+      line : {
+        stroke: '#9e9d9e',
+        fill: 'none',
+        strokeWidth: '1'
+      }
+    }
 
     const rx = function(r, a) {
       return c + r * Math.cos(rad(a))
@@ -71,11 +82,12 @@ const Cog = React.createClass({
     const drawTeeth = function(n) {
       const d = []
       for (let i = 0; i < n; i++) {
-        const a = angle * i - offset
+        const a = angle(n) * i - offset
         const line = [
           (i === 0) ? 'M' : 'L',
           num(rx(r1, a)),
           num(ry(r1, a)),
+          (i === 5) ? 'L 175 0' : '',
         ].join(' ')
         d.push(line)
       }
@@ -96,6 +108,7 @@ const Cog = React.createClass({
       h: size,
       fill: fill,
       d: pathData,
+      styleLine: styles.line
     }
 
   }
