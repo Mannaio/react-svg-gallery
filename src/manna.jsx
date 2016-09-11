@@ -1,8 +1,10 @@
 const React = require('react')
 
+// export class Manna extends React.Component
+
 const Manna = React.createClass({displayName: "Cog",
 
-  // getInitialState: function() {
+  // getInitialState: () {
   //   return {
   //     size: 64,
   //     d1: 1,
@@ -45,7 +47,7 @@ const Manna = React.createClass({displayName: "Cog",
     translate: 'translate'
   },
 
-  render: function() {
+  render() {
 
     // Global Variables
     const viewBoxParametersWidth = this.initVal.viewBoxParametersWidth
@@ -121,26 +123,17 @@ const Manna = React.createClass({displayName: "Cog",
 
     const viewBoxSmall = [0, 0, viewBoxParametersHeight, viewBoxParametersWidth].join(' ')
 
-    const angle = function(n) {
-      return 360 / n;
-    }
+    const angle = (n) => { return 360 / n}
 
-    const rad = function(a) {
-      return Math.PI * a / 180
-    }
+    const rad = (a) => { return Math.PI * a / 180}
 
-    const rx = function(r, a) {
-      return c + r * Math.cos(rad(a))
-    }
+    const rx = (r, a) => { return c + r * Math.cos(rad(a))}
 
-    const ry = function(r, a) {
-      return c + r * Math.sin(rad(a))
-    }
-    const num = function(n) {
-      return (n < 0.0000001) ? 0 : n
-    }
+    const ry = (r, a) => { return c + r * Math.sin(rad(a))}
 
-    const drawTeeth = function(n) {
+    const num = (n) => { return (n < 0.0000001) ? 0 : n}
+
+    const drawTeeth = (n) => {
       const d = []
       for (let i = 0; i < n; i++) {
         const a = angle(n) * i - offset
