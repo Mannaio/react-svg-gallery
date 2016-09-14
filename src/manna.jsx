@@ -2,7 +2,7 @@ const React = require('react')
 
 // export class Manna extends React.Component
 
-const Manna = React.createClass({displayName: "Cog",
+const Manna = React.createClass({
 
   // getInitialState: () {
   //   return {

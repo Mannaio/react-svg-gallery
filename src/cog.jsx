@@ -2,18 +2,6 @@ const React = require('react')
 
 const Cog = React.createClass({
 
-  // getInitialState: function() {
-  //   return {
-  //     size: 64,
-  //     d1: 1,
-  //     d2: .6875,
-  //     d3: .375,
-  //     teeth: 4,
-  //     splay: 0.375,
-  //     fill: 'currentcolor'
-  //   }
-  // },
-
   initVal: {
     likes: 10,
     code: "1",
@@ -47,7 +35,7 @@ const Cog = React.createClass({
     const r3 = this.initVal.d3 * size / 2
 
     // Angle
-    const angle = function(n) {
+    const angle = (n) => {
       return 360 / n;
     }
 
@@ -63,23 +51,23 @@ const Cog = React.createClass({
       }
     }
 
-    const rx = function(r, a) {
+    const rx = (r, a) => {
       return c + r * Math.cos(rad(a))
     }
 
-    const ry = function(r, a) {
+    const ry = (r, a) => {
       return c + r * Math.sin(rad(a))
     }
 
-    const num = function(n) {
+    const num = (n) => {
       return (n < 0.0000001) ? 0 : n
     }
 
-    const rad = function(a) {
+    const rad = (a) => {
       return Math.PI * a / 180
     }
 
-    const drawTeeth = function(n) {
+    const drawTeeth = (n) => {
       const d = []
       for (let i = 0; i < n; i++) {
         const a = angle(n) * i - offset

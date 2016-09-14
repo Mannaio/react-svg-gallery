@@ -18,7 +18,7 @@ const Line = React.createClass({
     animation: 'animated',
   },
 
-  render: function() {
+  render() {
 
     const animation = this.initVal.animation
     const caption = this.initVal.caption
@@ -52,7 +52,7 @@ const Line = React.createClass({
     const r5 = this.initVal.d2 * height // 50
 
 
-    const curve = function() {
+    const curve = () => {
       return [
         'M', r3, r1,
         'Q', r5, r3, r2, r1,
