@@ -2,8 +2,8 @@ import React from 'react';
 
 export default class Polygon extends React.Component {
 
-  constructor(likes, code, size, d1, d2, d3, teeth, splay, animation, min, max) {
-    super(likes, code, size, d1, d2, d3, teeth, splay, animation, min, max);
+  constructor(likes, code, size, d1, d2, d3, teeth, splay, animation, min, max, caption) {
+    super(likes, code, size, d1, d2, d3, teeth, splay, animation, min, max, caption);
     this.likes = likes;
     this.code = code;
     this.size = size;
@@ -23,7 +23,7 @@ export default class Polygon extends React.Component {
 
   render() {
 
-    const myclass = new Polygon(10, '4', 64, 1, .6875, .375, 4, .375, 4, .375, 'Fourth SVG', 'wheel', 128, 256);
+    const myclass = new Polygon(10, '4', 64, 1, .6875, .375, 4, 4, 'wheel', 128, 256, 'Fourth SVG');
     const animation = myclass.animation
     const caption = myclass.caption
     const likes = myclass.likes
