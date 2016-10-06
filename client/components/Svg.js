@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router';
 import CSSTransitionGroup from 'react-addons-css-transition-group';
 
-const Svg = React.createClass({
+export default class Svg extends React.Component {
+
   render() {
     const { svg, i, comments } = this.props;
     return (
@@ -49,6 +50,4 @@ const Svg = React.createClass({
       </figure>
     )
   }
-});
-
-export default Svg;
+};
