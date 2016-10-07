@@ -29,6 +29,11 @@ offsets = translateX(-50%) translateY(-50%)
   transform-origin: 50%;
 }
 
+.rotate {
+  animation: rotating 10s cubic-bezier(0,0,1,1) infinite alternate;
+  transform-origin: 50% 50%;
+}
+
 @keyframes dash {
   to {
     stroke-dashoffset: 100;
@@ -39,6 +44,22 @@ offsets = translateX(-50%) translateY(-50%)
   50% {
       transform: rotate(360deg);
   }
+}
+
+@keyframes rotating {
+  /*0% {
+    transform: rotate(0deg) translate(239px, 370px)
+  }
+
+  100% {
+     transform: rotate(-30deg) translate(-88px, 507px)
+  }*/
+
+
+  50% {
+      transform: rotate(360deg) translate( 10px, 0px);
+  }
+
 }
 
 .g1 {

@@ -19,7 +19,7 @@ export default class Cog extends React.Component {
 
   render() {
 
-    const myclass = new Cog(10, "1", 350, 1, .6875, .375, 6, .375, 'animated', 'currentcolor', 'First SVG');
+    const myclass = new Cog(10, "1", 350, 1, .6875, .375, 6, .375, 'wheel', 'currentcolor', 'First SVG');
 
     // const size = myclass.size
     const animation = myclass.animation

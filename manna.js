@@ -2,8 +2,8 @@ import React from 'react';
 
 export default class Manna extends React.Component {
 
-  constructor(likes, code, size, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, rad1, rad2, ratioHeight, ratioWidth, teeth, teethSix, splay, viewBoxParametersWidth, viewBoxParametersHeight, initialHeight, initialWidth, left, top, caption, translate) {
-    super(likes, code, size, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, rad1, rad2, ratioHeight, ratioWidth, teeth, teethSix, splay, viewBoxParametersWidth, viewBoxParametersHeight, initialHeight, initialWidth, left, top, caption, translate);
+  constructor(likes, code, size, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, rad1, rad2, ratioHeight, ratioWidth, teeth, teethSix, splay, viewBoxParametersWidth, viewBoxParametersHeight, initialHeight, initialWidth, left, top, caption, translate, rotate) {
+    super(likes, code, size, d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, rad1, rad2, ratioHeight, ratioWidth, teeth, teethSix, splay, viewBoxParametersWidth, viewBoxParametersHeight, initialHeight, initialWidth, left, top, caption, translate, rotate);
     this.likes = likes;
     this.code  = code;
     this.size  = size;
@@ -31,11 +31,12 @@ export default class Manna extends React.Component {
     this.left = left;
     this.top = top;
     this.caption = caption;
+    this.rotate = rotate;
   }
 
   render() {
 
-    const myclass = new Manna(10, "2", 350, 1, .6875, .375, 1.5217, 3.5, 1.94, 2.12, 2.25, 2.91, 1.75, 45, 50, 3.90, 1.72, 5, 6, 0.375, 720, 600, 205, 295, 239, 370, 'Third SVG', 'translate');
+    const myclass = new Manna(10, "2", 350, 1, .6875, .375, 1.5217, 3.5, 1.94, 2.12, 2.25, 2.91, 1.75, 45, 50, 3.90, 1.72, 5, 6, 0.375, 720, 600, 205, 295, 239, 370, 'Third SVG', 'translate', 'rotate');
     // Global Variables
     const viewBoxParametersWidth = myclass.viewBoxParametersWidth;
     const viewBoxParametersHeight = myclass.viewBoxParametersHeight;
@@ -57,6 +58,7 @@ export default class Manna extends React.Component {
     const ctopSecond = ctop + 25;
     const ctranFirstElement = 'translate('+cleft+', '+ctop+')';
     const ctranSeondElement = 'translate('+cleftSecond+', '+ctopSecond+')';
+    const rotate = myclass.rotate;
     const styles = {
       circle: {
         stroke: 'rgb(158, 157, 158)',
@@ -166,7 +168,8 @@ export default class Manna extends React.Component {
       circle: styles.circle,
       styleLine: styles.path,
       transformFirstElement: ctranFirstElement,
-      transformSecondElement: ctranSeondElement
+      transformSecondElement: ctranSeondElement,
+      rotate: rotate
     }
 
   }
