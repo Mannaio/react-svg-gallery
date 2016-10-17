@@ -9,6 +9,7 @@ import css from './styles/style.styl';
 import App from './components/App';
 import Single from './components/Single';
 import SvgGrid from './components/SvgGrid';
+import ChartsGrid from './components/ChartsGrid';
 
 // import react router deps
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
@@ -21,6 +22,9 @@ const router = (
       <Route path="/" component={App}>
         <IndexRoute component={SvgGrid}></IndexRoute>
         <Route path="/view/:svgId" component={Single}></Route>
+        <Route path="chartsGrid" component={ChartsGrid}>
+          <IndexRoute component={ChartsGrid}></IndexRoute>
+        </Route>
       </Route>
     </Router>
   </Provider>
