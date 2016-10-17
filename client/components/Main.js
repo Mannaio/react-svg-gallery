@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router';
+import Menu from './Menu';
 
-const Main = React.createClass({
+export default class Main extends React.Component {
   render() {
     return (
-      <div>
+      <div className="wrapper">
         <h1>
-          <Link to="/"></Link>
+          <Link to="/">React Experiments</Link>
         </h1>
+        <Menu />
         {React.cloneElement(this.props.children, this.props)}
       </div>
     )
   }
-});
-
-export default Main;
+};

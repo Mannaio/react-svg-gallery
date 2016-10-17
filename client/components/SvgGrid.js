@@ -1,7 +1,7 @@
 import React from 'react';
 import Svg from './Svg';
 
-const SvgGrid = React.createClass({
+export default class SvgGrid extends React.Component {
   render() {
     return (
       <div className="photo-grid">
@@ -9,6 +9,4 @@ const SvgGrid = React.createClass({
       </div>
     )
   }
-});
-
-export default SvgGrid;
+};
