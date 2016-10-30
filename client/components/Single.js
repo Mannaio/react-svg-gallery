@@ -12,7 +12,7 @@ const Single = React.createClass({
     const svgComments = this.props.comments[svgId] || [];
 
     return (
-      <div className="single-photo">
+      <div className="single">
         <Svg i={i} svg={svg} {...this.props} />
         <Comments svgComments={svgComments} {...this.props} />
       </div>

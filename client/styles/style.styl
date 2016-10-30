@@ -11,8 +11,7 @@ body
   flex-direction column
   align-items center
 
-.photo-grid
-.charts-grid
+.grid
   display flex
   flex-wrap wrap
   max-width 1200px
@@ -29,7 +28,7 @@ body
   box-shadow 0 0 0 5px rgba(0,0,0,0.03);
   position relative
 
-.single-photo
+.single
   @extend .grid-figure
   max-width 900px
   margin 0 auto
@@ -45,7 +44,7 @@ body
   .comments
     flex 1 0 40%
     max-width 40%
-  .grid-photo
+  .single
     width 100%
     margin 0
 
@@ -88,7 +87,7 @@ body
     resize vertical
 
 
-.grid-photo-wrap
+.grid-element-wrap
   position relative
 
 .likes-heart

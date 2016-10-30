@@ -8,7 +8,7 @@ export default class Svg extends React.Component {
     const { svg, i, comments } = this.props;
     return (
       <figure className="grid-figure">
-        <div className="grid-photo-wrap">
+        <div className="grid-element-wrap">
           <Link to={`/view/${svg.code}`}>
             <svg xmlns="http://www.w3.org/2000/svg" className={svg.animation} viewBox={svg.viewBox} width={svg.w} height={svg.h}>
               <svg viewBox={svg.viewBox} className={svg.animation} width={svg.w} height={svg.h} fill={svg.fill}>
