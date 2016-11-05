@@ -1,11 +1,11 @@
 const comments = {
-  "BAhvZrRwcfu":[
+  "1":[
     {
       "text":"Totally need to try this.",
       "user": "heavymetaladam"
     }
   ],
-  "BAcyDyQwcXX":[
+  "2":[
     {
       "text":"Wes. WE should have lunch.",
       "user": "jdaveknox"
@@ -23,7 +23,7 @@ const comments = {
       "user": "willowtreemegs"
     }
   ],
-  "BAPIPRjQce9":[
+  "3":[
     {
       "text":"Those are cute! They're like silver dollar pancakes.",
       "user": "rrsimonsen"
@@ -61,7 +61,7 @@ const comments = {
       "user": "world_greg"
     }
   ],
-  "BAF_KY4wcRY":[
+  "4":[
     {
       "text":"Looking great Wes! I'd like to see the other side of the room too.",
       "user": "axcdnt"
@@ -95,13 +95,13 @@ const comments = {
       "user": "wesbos"
     }
   ],
-  "_4jHytwcUA":[
+  "5":[
     {
       "text":"that is the sound of success!",
       "user": "mdxprograms"
     }
   ],
-  "_zbaOlQcbn":[
+  "6":[
     {
       "text":"Did she get to eat her letter?",
       "user": "pathiebert"
@@ -111,7 +111,7 @@ const comments = {
       "user": "kaitbos"
     }
   ],
-  "_rmvQfQce8":[
+  "7":[
     {
       "text":"A+",
       "user": "mrjoedee"
@@ -121,13 +121,13 @@ const comments = {
       "user": "jrtashjian"
     }
   ],
-  "_ep9kiQcVy":[
+  "8":[
     {
       "text":"All bundled up!  Where ya goin?",
       "user": "sophie_and_sadie"
     }
   ],
-  "_XpJcrwcSn":[
+  "9":[
     {
       "text":"Super congrats! That's wicked cool and looks great.",
       "user": "pmgllc"
@@ -141,10 +141,10 @@ const comments = {
       "user": "wesbos"
     }
   ],
-  "_KnU7MwceA":[
+  "10":[
 
   ],
-  "_HMejJQcY5":[
+  "11":[
     {
       "text":"👌",
       "user": "t_volpe"
@@ -154,7 +154,7 @@ const comments = {
       "user": "imagesofthisandthat"
     }
   ],
-  "_Fq2zmwcaz":[
+  "12":[
     {
       "text":"😍",
       "user": "melsariffodeen"
@@ -164,13 +164,13 @@ const comments = {
       "user": "ka11away"
     }
   ],
-  "_A2r0aQcfD":[
+  "13":[
     {
       "text":"Uhu!",
       "user": "lucascaixeta"
     }
   ],
-  "1rhFawccs":[
+  "14":[
     {
       "text":"What's your lighting source?",
       "user": "seth_mcleod"
@@ -184,19 +184,19 @@ const comments = {
       "user": "stolinski"
     }
   ],
-  "pjx-gQcVi":[
+  "15":[
 
   ],
-  "oTZ0zQcWt":[
+  "16":[
     {
       "text":"Love the coat! Where's it from? Lol",
       "user": "_lindersss"
     }
   ],
-  "mxKQoQcQh":[
+  "17":[
 
   ],
-  "hZh6IQcfN":[
+  "18":[
     {
       "text":"What do we gotta do to get some :)? @wesbos",
       "user": "jonasbad"
@@ -226,7 +226,7 @@ const comments = {
       "user": "gabrielvieira.me"
     }
   ],
-  "fasqlQceO":[
+  "19":[
     {
       "text":"Where's lux at? 💤?",
       "user": "henrihelvetica"
@@ -236,7 +236,7 @@ const comments = {
       "user": "danielleplas"
     }
   ],
-  "VBgtGQcSf":[
+  "20":[
     {
       "text":"@dogsandbrew",
       "user": "likea_bos"
@@ -250,7 +250,7 @@ const comments = {
       "user": "trevorb_91"
     }
   ],
-  "FpTyHQcau":[
+  "21":[
     {
       "text":"@kaitbos  that vest!!! 😍",
       "user": "courtneyeveline"
@@ -288,7 +288,7 @@ const comments = {
       "user": "wesbos"
     }
   ],
-  "B3eiIwcYV":[
+  "22":[
     {
       "text":"If you get in the mood for authentic Italian pizza, check out @backspaceaustin - it's👌🏻",
       "user": "dessie.ann"

@@ -1,6 +1,13 @@
 import React from 'react';
 
 export default class Comments extends React.Component {
+  constructor() {
+    super();
+
+    this.renderComment = this.renderComment.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  };
+
   renderComment(comment, i) {
     return (
       <div className="comment" key={i}>
