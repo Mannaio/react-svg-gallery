@@ -7,11 +7,13 @@ import rootReducer from './reducers/index';
 
 import comments from './data/comments';
 import svgs from './data/svgs';
+import charts from './data/charts';
 
 // create an object for the default data
 const defaultState = {
   svgs,
-  comments
+  comments,
+  charts
 };
 
 const enhancers = compose(

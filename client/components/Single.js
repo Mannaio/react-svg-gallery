@@ -2,7 +2,7 @@ import React from 'react';
 import Svg from './Svg';
 import Comments from './Comments';
 
-const Single = React.createClass({
+export default class Single extends React.Component {
   render() {
     const { svgId } = this.props.params;
 
@@ -18,6 +18,4 @@ const Single = React.createClass({
       </div>
     )
   }
-});
-
-export default Single;
+};

@@ -8,7 +8,7 @@ export default class Comments extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   };
 
-  renderComment(comment, i) {
+  renderComment = (comment, i) => {
     return (
       <div className="comment" key={i}>
         <p>
@@ -20,7 +20,7 @@ export default class Comments extends React.Component {
     )
   };
 
-  handleSubmit(e) {
+  handleSubmit = (e) => {
     e.preventDefault();
     const { svgId } = this.props.params;
     const author = this.refs.author.value;

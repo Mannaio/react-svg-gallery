@@ -6,7 +6,8 @@ import Main from './Main';
 function mapStateToProps(state) {
   return {
     svgs: state.svgs,
-    comments: state.comments
+    comments: state.comments,
+    charts: state.charts
   }
 }
 
