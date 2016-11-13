@@ -1,13 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router';
+import ChartsGrid from './ChartsGrid';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, ReferenceLine,
   ReferenceDot, Tooltip, CartesianGrid, Legend, Brush } from 'recharts';
 
 export default class Chart extends React.Component {
   render () {
-    const { chart, i} = this.props;
+    const { charts, i} = this.props;
   	return (
-    	<LineChart width={600} height={300} data={data}
+    	<LineChart width={600} height={300} data={charts}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
        <XAxis dataKey="name"/>
        <YAxis/>

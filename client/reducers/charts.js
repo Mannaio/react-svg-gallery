@@ -1,4 +1,4 @@
-export default function svgs(state = [], action) {
+export default function charts(state = [], action) {
   switch(action.type) {
     case 'INCREMENT_LIKES' :
       console.log("Incrementing Likes!!");
