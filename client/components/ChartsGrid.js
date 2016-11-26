@@ -7,7 +7,7 @@ export default class ChartsGrid extends React.Component{
 
     return (
       <div className="grid">
-        {this.props.charts.map((chart, i) => <Chart {...this.props} key={i} i={i} chart={chart} />)}
+        {this.props.charts.map((chart, i) => <Chart key={i} chart={chart} />)}
       </div>
     )
   }
