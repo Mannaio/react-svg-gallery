@@ -8,12 +8,14 @@ import rootReducer from './reducers/index';
 import comments from './data/comments';
 import svgs from './data/svgs';
 import charts from './data/charts';
+import nums from './data/nums';
 
 // create an object for the default data
 const defaultState = {
   svgs,
   comments,
-  charts
+  charts,
+  nums
 };
 
 const enhancers = compose(

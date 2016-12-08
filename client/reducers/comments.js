@@ -1,4 +1,4 @@
-function svgComments(state = [], action) {
+export default function comments(state = [], action) {
   switch(action.type){
     case 'ADD_COMMENT':
       // return the new state with the new comment
@@ -31,5 +31,3 @@ function comments(state = [], action) {
   }
   return state;
 }
-
-export default comments;

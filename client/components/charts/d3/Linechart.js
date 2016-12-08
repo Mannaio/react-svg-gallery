@@ -3,16 +3,16 @@ import HorizontalAxis from './HorizontalAxis';
 import VerticalAxis from './VerticalAxis';
 import LinePlot from './LinePlot';
 
-class LineChart extends React.Component {
+export default class LineChart extends React.Component {
   static propTypes = {
-    data: React.PropTypes.array.isRequired,
+    nums: React.PropTypes.array.isRequired,
     horizontalAxisHeight: React.PropTypes.number.isRequired,
     trbl: React.PropTypes.array.isRequired,
     verticalAxisWidth: React.PropTypes.number.isRequired,
     view: React.PropTypes.array.isRequired
   };
 
-  buildLinePlot (data, containerView, containerTrbl, horizontalAxisHeight, verticalAxisWidth, xScale, yScale) {
+  buildLinePlot (nums, containerView, containerTrbl, horizontalAxisHeight, verticalAxisWidth, xScale, yScale) {
     const trbl = [
       horizontalAxisHeight,
       verticalAxisWidth,
@@ -24,7 +24,7 @@ class LineChart extends React.Component {
       containerView[1] - horizontalAxisHeight * 2
     ];
     return (
-      <LinePlot {...{data, trbl, view, xScale, yScale}} />
+      <LinePlot {...{nums, trbl, view, xScale, yScale}} />
     );
   }
 
@@ -55,10 +55,10 @@ class LineChart extends React.Component {
   }
 
   render () {
-    const {view, trbl, data, horizontalAxisHeight, verticalAxisWidth} = this.props;
-    const [domainXMin, domainXMax] = d3.extent(data, (value, index) => index);
+    const {view, trbl, nums, horizontalAxisHeight, verticalAxisWidth} = this.props;
+    const [domainXMin, domainXMax] = d3.extent(nums, (value, index) => index);
     const xScale = this.buildScale([domainXMin, domainXMax], [0, view[0] - verticalAxisWidth * 2]);
-    const yScale = this.buildScale(d3.extent(data), [view[1] - horizontalAxisHeight * 2, 0]);
+    const yScale = this.buildScale(d3.extent(nums), [view[1] - horizontalAxisHeight * 2, 0]);
     const viewBox = `0 0 ${view[0]} ${view[1]}`;
     const transform = `translate(${trbl[0]}, ${trbl[3]})`;
     return (
@@ -66,7 +66,7 @@ class LineChart extends React.Component {
         <g {...{transform}}>
           {this.buildHorizontalAxis(view, trbl, horizontalAxisHeight, verticalAxisWidth, xScale)}
           {this.buildVerticalAxis(view, trbl, horizontalAxisHeight, verticalAxisWidth, yScale)}
-          {this.buildLinePlot(data, view, trbl, horizontalAxisHeight, verticalAxisWidth, xScale, yScale)}
+          {this.buildLinePlot(nums, view, trbl, horizontalAxisHeight, verticalAxisWidth, xScale, yScale)}
         </g>
       </svg>
     );
