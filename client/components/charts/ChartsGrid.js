@@ -25,11 +25,11 @@ export default class ChartsGrid extends React.Component{
     const trbl = [0, 0, 0, 0]
     const horizontalAxisHeight = 30;
     const verticalAxisWidth = 42;
-    const { nums } = this.props;
+    const nums  = this.props.nums || [];
+    // const nums = [32, 19, 47, 38, 17, 62, 94, 21, 59, 62];
 
     return (
       <div className="grid">
-          console.log('!!!!', LineChart)
           <LineChart {...{view, trbl, nums, horizontalAxisHeight, verticalAxisWidth}} />
       </div>
     )

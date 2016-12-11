@@ -2,6 +2,7 @@ import React from 'react';
 import HorizontalAxis from './HorizontalAxis';
 import VerticalAxis from './VerticalAxis';
 import LinePlot from './LinePlot';
+import * as d3 from "d3";
 
 export default class LineChart extends React.Component {
   static propTypes = {
