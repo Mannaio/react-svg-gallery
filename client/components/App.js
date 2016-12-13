@@ -7,7 +7,8 @@ function mapStateToProps(state) {
   return {
     svgs: state.svgs,
     comments: state.comments,
-    charts: state.charts
+    charts: state.charts,
+    nums: state.nums
   }
 }
 
