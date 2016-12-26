@@ -14,7 +14,8 @@ export default class LinePlot extends React.Component {
      const line = d3.line();
      line.x((value, index) => xScale(index));
      line.y(yScale);
-     line.curve(d3.curveLinear);
+     line.curve(d3.curveStepBefore);
+    //  line.curve(d3.curveLinear);
      const d = line(nums);
      const className = 'line-chart__area-plot';
      return (
@@ -23,7 +24,7 @@ export default class LinePlot extends React.Component {
    }
 
    render () {
-     const {trbl, view, nums, xScale, yScale, year} = this.props;
+     const {trbl, view, nums, xScale, yScale} = this.props;
      const [width, height] = view;
      const transform = `translate(${trbl[3]}, ${trbl[0]})`;
      return (
