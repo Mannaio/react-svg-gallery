@@ -20,8 +20,10 @@ export default class Chart extends React.Component {
          <Line type="monotone" dataKey={chart.line1Key} stroke="#82ca9d" />
          <Line type="monotone" dataKey={chart.line2Key} stroke="#8884d8" activeDot={{r: 8}}/>
         </LineChart>
-        <h2>Android {chart.sumAndr}</h2>
-        <h2>iOS {chart.sumiOS}</h2>
+        <div className='wrap'>
+          <h3 className='android'>Android {chart.sumAndr}</h3>
+          <h3 className='iOS'>iOS {chart.sumiOS}</h3>
+        </div>
       </div>
     );
   }

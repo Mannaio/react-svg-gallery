@@ -6,6 +6,13 @@ export function increment(index) {
   }
 }
 
+export function increasewidth(index) {
+  return {
+    type: 'INCREMENT_WIDTH',
+    index
+  }
+}
+
 // add comment
 export function addComment(svgId, author, comment) {
   return {

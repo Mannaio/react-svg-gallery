@@ -15,6 +15,7 @@ export default class Polygon extends React.Component {
     this.animation = animation;
     this.min = min;
     this.max = max;
+    this.caption = caption;
   }
 
   random(min, max) {

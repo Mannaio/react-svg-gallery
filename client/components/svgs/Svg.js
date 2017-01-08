@@ -5,7 +5,7 @@ import CSSTransitionGroup from 'react-addons-css-transition-group';
 export default class Svg extends React.Component {
 
   render() {
-    const { svg, i, comments } = this.props;
+    const { svg, i, a, comments } = this.props;
     return (
       <figure className="grid-figure">
         <div className="grid-element-wrap">
@@ -39,6 +39,7 @@ export default class Svg extends React.Component {
           <p>{svg.caption}</p>
           <div className="control-buttons">
             <button onClick={this.props.increment.bind(null, i)} className="likes">&hearts; {svg.likes}</button>
+            <button onClick={this.props.increasewidth.bind(null, i)}>Increase Width</button>
             <Link className="button" to={`/view/${svg.code}`}>
               <span className="comment-count">
                 <span className="speech-bubble"></span>
