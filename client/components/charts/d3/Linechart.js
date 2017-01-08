@@ -2,6 +2,7 @@ import React from 'react';
 import HorizontalAxis from './HorizontalAxis';
 import VerticalAxis from './VerticalAxis';
 import LinePlot from './LinePlot';
+import * as d3 from "d3";
 
 export default class LineChart extends React.Component {
   static propTypes = {
@@ -20,8 +21,8 @@ export default class LineChart extends React.Component {
       verticalAxisWidth
     ];
     const view = [
-      containerView[0] - verticalAxisWidth * 2,
-      containerView[1] - horizontalAxisHeight * 2
+      containerView[0],
+      containerView[1]
     ];
     return (
       <LinePlot {...{nums, trbl, view, xScale, yScale}} />
@@ -60,9 +61,10 @@ export default class LineChart extends React.Component {
     const xScale = this.buildScale([domainXMin, domainXMax], [0, view[0] - verticalAxisWidth * 2]);
     const yScale = this.buildScale(d3.extent(nums), [view[1] - horizontalAxisHeight * 2, 0]);
     const viewBox = `0 0 ${view[0]} ${view[1]}`;
+    const className = 'svg-single_chart';
     const transform = `translate(${trbl[0]}, ${trbl[3]})`;
     return (
-      <svg {...{viewBox}}>
+      <svg {...{viewBox, className}}>
         <g {...{transform}}>
           {this.buildHorizontalAxis(view, trbl, horizontalAxisHeight, verticalAxisWidth, xScale)}
           {this.buildVerticalAxis(view, trbl, horizontalAxisHeight, verticalAxisWidth, yScale)}
