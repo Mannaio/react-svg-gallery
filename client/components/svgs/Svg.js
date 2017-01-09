@@ -39,7 +39,7 @@ export default class Svg extends React.Component {
           <p>{svg.caption}</p>
           <div className="control-buttons">
             <button onClick={this.props.increment.bind(null, i)} className="likes">&hearts; {svg.likes}</button>
-            <button onClick={this.props.increasewidth.bind(null, i)}>Increase Width</button>
+            <button onClick={this.props.increase.bind(null, i)}>Increase</button>
             <Link className="button" to={`/view/${svg.code}`}>
               <span className="comment-count">
                 <span className="speech-bubble"></span>

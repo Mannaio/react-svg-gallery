@@ -6,9 +6,9 @@ export function increment(index) {
   }
 }
 
-export function increasewidth(index) {
+export function increase(index) {
   return {
-    type: 'INCREMENT_WIDTH',
+    type: 'INCREMENT_COORDINATES',
     index
   }
 }
