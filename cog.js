@@ -2,11 +2,12 @@ import React from 'react';
 
 export default class Cog extends React.Component {
 
-  constructor(likes, code, size, d1, d2, d3, teeth, splay, animation, fill, caption) {
+  constructor(likes, code, size, sizeviewbox, d1, d2, d3, teeth, splay, animation, fill, caption) {
     super(likes, code, size, d1, d2, d3, teeth, splay, animation, fill, caption);
     this.likes = likes;
     this.code = code;
     this.size = size;
+    this.sizeviewbox = sizeviewbox;
     this.d1 = d1;
     this.d2 = d2;
     this.d3 = d3;
@@ -19,7 +20,7 @@ export default class Cog extends React.Component {
 
   render() {
 
-    const myclass = new Cog(10, "1", 350, 1, .6875, .375, 6, .375, 'wheel', 'currentcolor', 'First SVG');
+    const myclass = new Cog(10, "1", 350, 650, 1, .6875, .375, 6, .375, 'expansion', 'currentcolor', 'First SVG');
 
     // const size = myclass.size
     const animation = myclass.animation
@@ -27,6 +28,7 @@ export default class Cog extends React.Component {
     const likes = myclass.likes
     const code = myclass.code
     const size = myclass.size
+    const sizeviewbox = myclass.sizeviewbox
     const fill = myclass.fill
     const teeth = myclass.teeth
     // Center
@@ -44,11 +46,11 @@ export default class Cog extends React.Component {
 
     const offset = 90
 
-    const viewBox = [0, 0, size, size].join(' ')
+    const viewBox = [0, 0, sizeviewbox, sizeviewbox].join(' ')
 
     const styles = {
       line : {
-        stroke: '#9e9d9e',
+        stroke: 'rgb(198, 0, 0)',
         fill: 'none',
         strokeWidth: '1'
       }

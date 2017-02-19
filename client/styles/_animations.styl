@@ -16,8 +16,13 @@ offsets = translateX(-50%) translateY(-50%)
     display none
 
 .wheel {
-  animation: rotate 10s cubic-bezier(0,0,1,1) infinite alternate;
-  transform-origin: 50% 50%;
+  animation: rotate 5s cubic-bezier(1, 1, 1, 1) infinite alternate;
+  transform-origin: 30% 30%;
+}
+
+.expansion {
+  animation: expand 5s ease-out infinite alternate;
+  transform-origin: 0% 100%;
 }
 
 .animated {
@@ -42,7 +47,13 @@ offsets = translateX(-50%) translateY(-50%)
 
 @keyframes rotate {
   50% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes expand {
+  50% {
+    transform: scaleX(1.5);
   }
 }
 
