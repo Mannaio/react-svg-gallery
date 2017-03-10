@@ -13,6 +13,20 @@ export function increase(index) {
   }
 }
 
+export function morewidth(index) {
+  return {
+    type: 'INCREMENT_VIEWBOX',
+    index
+  }
+}
+
+export function lesswidth(index) {
+  return {
+    type: 'DECREASE_WIDTH',
+    index
+  }
+}
+
 // add comment
 export function addComment(svgId, author, comment) {
   return {

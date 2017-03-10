@@ -108,7 +108,7 @@ export default class Manna extends React.Component {
     // const angle = 360 / myclass.teethSix
     const offset = 90
 
-    const viewBoxSmall = [0, 0, viewBoxParametersHeight, viewBoxParametersWidth].join(' ')
+    const viewBox = [0, 0, viewBoxParametersHeight, viewBoxParametersWidth].join(' ')
 
     const angle = (n) => { return 360 / n}
 
@@ -134,23 +134,18 @@ export default class Manna extends React.Component {
       return d.join(' ')
     }
 
-    const pathData = [
-      drawTeeth(teeth)
-    ].join(' ')
-
     const pathDataHexagon = [
       drawTeeth(teethSix)
     ].join(' ')
 
     return {
-      viewBoxSmall: viewBoxSmall,
+      viewBox: viewBox,
       caption: caption,
       likes: likes,
       code: code,
       w: size,
       h: size,
       fill: fill,
-      d: pathData,
       d2: pathDataHexagon,
       cx1: cx1,
       cx2: cx2,

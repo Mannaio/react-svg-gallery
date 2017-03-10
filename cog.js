@@ -100,7 +100,7 @@ export default class Cog extends React.Component {
       w: size,
       h: size,
       fill: fill,
-      d: pathData,
+      d2: pathData,
       styleLine: styles.line
     }
 
