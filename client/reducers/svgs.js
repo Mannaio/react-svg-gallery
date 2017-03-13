@@ -40,6 +40,21 @@ export default function svgs(state = [], action) {
         ...state.slice(index + 1), // after the one we are updating
       ]
     }
+    case 'DECREASE_VIEWBOX' : {
+      console.log("decrease viewbox");
+      const index = action.index;
+      let string = state[index].viewBox;
+      let array = string.split(" ");
+      let max = array.length;
+      let i = (state[index].index || 2) + 1;
+      if ( i >=  max ) i = 2;
+      array[i] = parseInt(array[i]) + 20;
+      return [
+        ...state.slice(0,index), // before the one we are updating
+        {...state[index], viewBox: array.join(' '), index: i},
+        ...state.slice(index + 1), // after the one we are updating
+      ]
+    }
     default:
       return state;
   }

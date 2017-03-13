@@ -22,7 +22,7 @@ export function morewidth(index) {
 
 export function lesswidth(index) {
   return {
-    type: 'DECREASE_WIDTH',
+    type: 'DECREASE_VIEWBOX',
     index
   }
 }
