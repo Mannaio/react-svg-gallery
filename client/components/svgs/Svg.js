@@ -17,6 +17,7 @@ export default class Svg extends React.Component {
               <circle style={svg.circle} cx={svg.cx3} cy={svg.cy1} r={svg.rad2}></circle>
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy2} r={svg.rad1}></circle>
               <circle style={svg.circle} cx={svg.cx4} cy={svg.cy3} r={svg.rad1}></circle>
+              <circle style={svg.circlex5} cx={svg.cx5} cy={svg.cy5} r={svg.rad5}></circle>
               <svg viewBox={svg.viewBox}  width={svg.initialWidth} height={svg.initialHeight}>
                 <g transform={svg.transformFirstElement}>
                   <path d={svg.d2} className={svg.rotate} style={svg.styleLine}></path>

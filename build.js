@@ -3,7 +3,7 @@ import React from 'react';
 // import { renderToStaticMarkup } from 'react-dom/server';
 import Manna from './Manna';
 import Cog from './Cog';
-// import Square from './Square';
+import Square from './Square';
 import Polygon from './Polygon';
 
 const build = (name="defaultName", props)=> {
@@ -14,7 +14,7 @@ const build = (name="defaultName", props)=> {
     for (var i = 0; i < n; i++) {
       svgs.push(Cog.prototype.render());
       svgs.push(Manna.prototype.render());
-      // svgs.push(Square.prototype.render());
+      svgs.push(Square.prototype.render());
       svgs.push(Polygon.prototype.render());
     }
 
